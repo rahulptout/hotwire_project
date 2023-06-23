@@ -1,0 +1,14 @@
+ <tr id="user_row_<%=user.id%>">
+      <td><%= user.name%></td>
+      <td><%= user.email%></td>
+      <td><%= user.city%></td>
+      <td><%= user.state%></td>
+      <td><%= user.country%></td>
+      <td><%= user.contact_number%></td>
+      <td>
+        <%= link_to "View user", user, class: "btn btn-info", data: {controller: 'user-modal'}  %>
+        <%= link_to "Edit user", edit_user_path(user), class: "btn btn-sucess", data: {controller: 'user-modal'} %>
+        <%= link_to "Delete user", user_path(user), method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+
+      </td>
+  </tr>
