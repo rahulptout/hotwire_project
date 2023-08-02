@@ -13,7 +13,7 @@ export default class extends Controller {
   showModal(event) {
     event.preventDefault();
     this.url = this.element.getAttribute("href");
-    // console.log(this.url);
+    console.log(this.url);
     fetch(this.url, {
       headers: {
         Accept: "text/vnd.turbo-stream.html"
